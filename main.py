@@ -296,14 +296,84 @@
 # update()
 # exitonclick()
 
-count = 0
-for line in open('9.txt'):
-    a = [int(x) for x in line.split()]
-    p1 = [x for x in a if a.count(x) >= 2]
-    np = [x for x in a if a.count(x) == 1]
-    if len(p1) >= 2:
-        if sum(np) % 2 == 0:
-            count += 1
+# count = 0
+# for line in open('9.txt'):
+#     a = [int(x) for x in line.split()]
+#     p1 = [x for x in a if a.count(x) >= 2]
+#     np = [x for x in a if a.count(x) == 1]
+#     if len(p1) >= 2:
+#         if sum(np) % 2 == 0:
+#             count += 1
 
-print(count)
+# print(count)
 
+# import pyautogui
+# import time
+
+# def toggle_f_key():
+#     # Проверяем текущее состояние клавиши F
+#     f_pressed = pyautogui.keyDown('f')
+    
+#     if f_pressed:
+#         # Если клавиша нажата, отпускаем её
+#         pyautogui.keyUp('f')
+#     else:
+#         # Если клавиша отпущена, зажимаем её
+#         pyautogui.keyDown('f')
+
+# try:
+#     while True:
+#         # Ожидаем нажатия NumPad1
+#         if pyautogui.isKeyPressed('numpad1'):
+#             toggle_f_key()
+        
+#         # Небольшая задержка между итерациями цикла
+#         time.sleep(0.01)
+        
+# except KeyboardInterrupt:
+#     # Завершаем работу программы при нажатии Ctrl+C
+#     print("\nПрограмма завершена.")
+
+# import keyboard
+
+# def toggle_f_key():
+#     if keyboard.is_pressed('f'):
+#         keyboard.release('f')
+#         print("Клавиша F отпущена")
+#     else:
+#         keyboard.press('f')
+#         print("Клавиша F нажата")
+
+# try:
+#     while True:
+#         if keyboard.read_key() == 'z':
+#             toggle_f_key()
+# except KeyboardInterrupt:
+#     print("\nПрограмма завершена.")
+
+
+# s = str(77777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777)
+# while '3333' in s or '7777' in s:
+#     if '3333' in s:
+#         s = s.replace('3333', '777', 1)
+#     else:
+#         s = s.replace('7777', '33', 1)
+# print(s)
+
+# s = str(1111111111111111111111111111111111111111111111111111111111111111111111111)
+# while '1111' in s or '2222' in s or '9999' in s:
+#     s = s.replace('1111', '9', 1)
+#     s = s.replace('2222', '11', 1)
+#     s = s.replace('9999', '2', 1)
+# print(s)
+
+s = '55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555' 
+while '5555' in s or '6666' in s or '1111' in s:
+    if '5555' in s:
+        s = s.replace('5555', '66', 1)
+    if '6666' in s:
+        s = s.replace('6666', '11', 1)
+    if '1111' in s:
+        s = s.replace('1111', '5', 1)
+
+print(s)  # Вывод результата
