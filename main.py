@@ -367,13 +367,70 @@
 #     s = s.replace('9999', '2', 1)
 # print(s)
 
-s = '55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555' 
-while '5555' in s or '6666' in s or '1111' in s:
-    if '5555' in s:
-        s = s.replace('5555', '66', 1)
-    if '6666' in s:
-        s = s.replace('6666', '11', 1)
-    if '1111' in s:
-        s = s.replace('1111', '5', 1)
+# s = '55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555' 
+# while '5555' in s or '6666' in s or '1111' in s:
+#     if '5555' in s:
+#         s = s.replace('5555', '66', 1)
+#     if '6666' in s:
+#         s = s.replace('6666', '11', 1)
+#     if '1111' in s:
+#         s = s.replace('1111', '5', 1)
 
-print(s)  # Вывод результата
+# print(s)  # Вывод результата
+
+# from itertools import product, permutations
+
+# def f(z, w, y, x):
+#     return ((not w) and ((y or z) <= (y and (not x))))
+
+# for x1, x2, x3, x4, x5, x6, x7, x8 in product([0, 1], repeat=8):
+#     t = (
+#         (x1, x2, x3, 1, 1),
+#         (x4, x5, 1, x6, 1),
+#         (x7, 1, 1, x8, 1)
+#     )
+#     if len(t) == len(set(t)):
+#         for p in permutations('xwyz', r=4):
+#             if all(f(**dict(zip(p, line))) == line[-1] for line in t):
+#                 print(*p)
+
+# from itertools import product, permutations
+
+# a = '4578 367 26 15 148 238 128 1567'.split()
+# s = 'АБ БВ ВГ ГД ЕД ЕЖ ЖИ ИА ИБ БЖ ЖВ ГЕ'.split()
+# for p in permutations('АБВГДЖЕИ'):
+#     if all(str(p.index(x) + 1) in a[p.index(y)] for x, y in s):
+#         print(*p)
+
+# a = 82 // 3**2 % 7
+# print(a)
+
+from turtle import *
+
+tracer(0) 
+m = 50    
+size = 5   
+
+for row in range(size):
+    for col in range(size):
+        penup()
+        goto(col * m - (size * m) // 2, row * m - (size * m) // 2)
+        pendown()
+
+        fillcolor("white" if (row + col) % 2 else "black")
+        begin_fill()
+        for _ in range(4):
+            forward(m)
+            left(90)
+        end_fill()
+
+penup()
+goto(-size * m // 2, -size * m // 2)
+pendown()
+color("black")
+for _ in range(4):
+    forward(size * m)
+    left(90)
+
+update()
+exitonclick()
