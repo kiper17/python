@@ -405,32 +405,66 @@
 # a = 82 // 3**2 % 7
 # print(a)
 
-from turtle import *
+# from turtle import *
 
-tracer(0) 
-m = 50    
-size = 5   
+# tracer(0) 
+# m = 50    
+# size = 5   
 
-for row in range(size):
-    for col in range(size):
-        penup()
-        goto(col * m - (size * m) // 2, row * m - (size * m) // 2)
-        pendown()
+# for row in range(size):
+#     for col in range(size):
+#         penup()
+#         goto(col * m - (size * m) // 2, row * m - (size * m) // 2)
+#         pendown()
 
-        fillcolor("white" if (row + col) % 2 else "black")
-        begin_fill()
-        for _ in range(4):
-            forward(m)
-            left(90)
-        end_fill()
+#         fillcolor("white" if (row + col) % 2 else "black")
+#         begin_fill()
+#         for _ in range(4):
+#             forward(m)
+#             left(90)
+#         end_fill()
 
-penup()
-goto(-size * m // 2, -size * m // 2)
-pendown()
-color("black")
-for _ in range(4):
-    forward(size * m)
-    left(90)
+# penup()
+# goto(-size * m // 2, -size * m // 2)
+# pendown()
+# color("black")
+# for _ in range(4):
+#     forward(size * m)
+#     left(90)
 
-update()
-exitonclick()
+# update()
+# exitonclick()
+
+
+
+
+# n, k = map(int, input().split())
+# w = sorted(map(int, input().split()), reverse=True)
+# p = sorted(map(int, input().split()), reverse=True)
+
+# a = b = 0
+# s = 0
+
+# while a < n and b < n:
+#     if w[a] * p[b] <= k:
+#         s += w[a] * p[b]
+#         a += 1
+#         b += 1
+#     else:
+#         b += 1
+
+# print(s if a == n else -1)
+
+x = int(input())
+y = int(input())
+
+x1 = int(input())
+y1 = int(input())
+
+def check(x, y, x1, y1):
+    if ((x1 - x == 1 or x1 - x == -1) and (y1 - y == 2 or y1 - y == -2)) or ((x1 - x == 2 or x1 - x == -2) and (y1 - y == 1 or y1 - y == -1)):
+        return "YES"
+    else:
+        return "No"
+
+print(check(x, y, x1, y1))

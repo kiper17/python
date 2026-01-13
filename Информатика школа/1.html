@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Arduino Платы — Полностью автономный</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; }
+header { background: #0d47a1; color: white; padding: 20px; text-align: center; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; cursor: pointer; }
+nav a:hover { text-decoration: underline; }
+.container { max-width: 900px; margin: auto; padding: 20px; }
+img.board { width: 100%; max-width: 500px; border-radius: 10px; display: block; margin: 20px auto; }
+.cards { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.card { width: 250px; background: white; border-radius: 8px; overflow: hidden; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.card img { width: 100%; cursor: pointer; }
+.card h3 { padding: 10px; }
+.page { display: none; }
+.active { display: block; }
+.button { margin-top: 20px; display: inline-block; padding: 8px 15px; background: #0d47a1; color: white; border-radius: 5px; text-decoration: none; }
+.button:hover { background: #073973; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Arduino Платы</h1>
+  <nav>
+    <a onclick="showPage('home')">Главная</a>
+    <a onclick="showPage('uno')">Uno</a>
+    <a onclick="showPage('nano')">Nano</a>
+    <a onclick="showPage('mega')">Mega</a>
+  </nav>
+</header>
+
+<!-- Главная -->
+<div id="home" class="page active container">
+  <h2>Выберите плату</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="uno.jpg" alt="Arduino Uno" onclick="showPage('uno')">
+      <h3>Arduino Uno</h3>
+    </div>
+    <div class="card">
+      <img src="nano.jpg" alt="Arduino Nano" onclick="showPage('nano')">
+      <h3>Arduino Nano</h3>
+    </div>
+    <div class="card">
+      <img src="mega.jpg" alt="Arduino Mega" onclick="showPage('mega')">
+      <h3>Arduino Mega</h3>
+    </div>
+  </div>
+</div>
+
+<!-- UNO -->
+<div id="uno" class="page container">
+  <h2>Arduino Uno</h2>
+  <img src="uno.jpg" class="board">
+  <p>Arduino Uno — популярная плата на ATmega328P, подходит для обучения и учебных проектов.</p>
+  <a class="button" onclick="showPage('home')">⮜ Вернуться</a>
+</div>
+
+<!-- NANO -->
+<div id="nano" class="page container">
+  <h2>Arduino Nano</h2>
+  <img src="nano.jpg" class="board">
+  <p>Arduino Nano — компактная версия платы, предназначена для встроенных проектов.</p>
+  <a class="button" onclick="showPage('home')">⮜ Вернуться</a>
+</div>
+
+<!-- MEGA -->
+<div id="mega" class="page container">
+  <h2>Arduino Mega</h2>
+  <img src="mega.jpg" class="board">
+  <p>Arduino Mega — плата с большим количеством портов и памяти, подходит для крупных проектов.</p>
+  <a class="button" onclick="showPage('home')">⮜ Вернуться</a>
+</div>
+
+<script>
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

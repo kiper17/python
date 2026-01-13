@@ -1,0 +1,52 @@
+body {
+    background-color: #FFEEEE;
+    font-family: Georgia, serif;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-image: url("cat.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 140px;           
+    padding-top: 40px;             
+    margin-top: 0;
+}
+
+h2 {
+    color: #800000;
+}
+
+.latin {
+    font-style: italic;
+    color: #800000;
+}
+
+p {
+    text-indent: 30px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.author {
+    font-style: italic;
+    text-indent: 0;
+}
+
+.quote {
+    background-color: #FEFEE2;
+    margin: 0;
+    width: 50%;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border: 1px dotted #000000;
+    padding: 10px;
+}
+
+.author a:hover {
+    color: red;
+}
