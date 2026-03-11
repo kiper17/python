@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виды</title>
+    <!--Мета-теги-->
+    <meta name="description" content="Сайт об оптических иллюзиях, их видах и научных объяснениях">
+    <meta name="keywords" content="оптические иллюзии, визуальное восприятие, обман зрения, виды иллюзий, наука, психология">
+    <meta name="author" content="Лощилова Анна">
+    <!--Импорт шрифта-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gravitas One', cursive;
+            background-color: #c3e4f5;
+        }
+
+        /*Стили для основного контейнера*/
+        .main-container {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .page-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /*Стили для текста в сетке*/
+        .grid-item-text {
+            background-color: #F0F8FF;
+            border: 2px solid #000000;
+            padding: 60px;
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+            width: 750px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*Стили для изображения в сетке*/
+        .grid-item-image {
+            border: 2px solid #000000;
+            padding: 0;
+            text-align: center;
+            font-size: 40px;
+            color: #333;
+            width: 750px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="page-title">ВИДЫ</h1>
+        <div class="grid-container">
+            <div class="grid-item-image"><img src="image/light.png" alt="Лучи света"></div>
+            <div class="grid-item-text">Оптическая иллюзия, которая представляет собой вертикальную полосу света, тянущуюся вверх от яркого источника света: заходящего Солнца, Луны или даже мощного уличного фонаря.</div>
+            <div class="grid-item-text">Оптическая иллюзия, расположенная на юго-западном побережье Маврикия, у подножия горы Ле Морн-Брабант.</div>
+            <div class="grid-item-image"><img src="image/water.png" alt="Водопад"></div>
+        </div>
+    </div>
+</body>
+</html>

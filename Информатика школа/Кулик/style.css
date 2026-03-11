@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 125vh;
+    color: #000;
+    background: linear-gradient(238.19deg, #FFFFFF 18.03%, #979797 90.83%);
+}
+
+
+
+/* Заголовок страницы ВЫБЕРИ */
+.page-title {
+    position: absolute;
+    width: 829px;
+    height: 242px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 242px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Подзаголовок КАМЕНЬ ЧУДЕС */
+.subtitle {
+    position: absolute;
+    width: 394px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 199px;
+    font-family: 'Muller';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шкатулка  */
+.chest {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 1079.09px;
+    height: 1055.45px;
+}
+
+.chest img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Footer - авторские права */
+.copyright {
+    position: absolute;
+    width: 977px;
+    height: 132px;
+    left: 26px;
+    top: 1270px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+    color: #000000;
+}
+
+.lang-wrapper {
+  position: relative;
+}
+
+.lang {
+  position: absolute;
+  top: 40px; 
+  left: 59px;  
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.lang-text {
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* стрелка */
+.lang-arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  margin-top: 4px; 
+}
+
+.burger {
+
+  width: 53px;
+  height: 39px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+.burger span {
+  width: 53px;
+  height: 10.67px;
+  background: #737373;
+  border-radius: 32px;
+}
+
+/* букашка */
+.bug {
+  position: absolute;
+  width: 158px;
+  height: 161px;
+  overflow: hidden;
+  right: 50px;
+  top: 1150px;
+}
+
+.bug img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-block {
+  position: absolute;
+  top: 35px;   
+  left: 1628px; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}

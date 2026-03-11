@@ -1,17 +1,10 @@
-M, N, K = map(int, input().split())
+from ipaddress import *
 
-V = 200
-W = 100
+k=0
+for mask in range(33):
+    net1=ip_network('206.140.112.232/'+str(mask),0)
+    net2 = ip_network('206.140.112.224/'+str(mask),0)
+    if net1.network_address == net2.network_address:
+        print(mask)
 
-r = N % K
-
-if r == 1:
-    print(0)
-elif N + K + 1 > M:
-    print((r - 1) * V)
-elif N < K + 1:
-    print((N - 1) * V)
-elif (r + 1) * V < (K + 1 - r) * W:
-    print((r + 1) * V)
-else:
-    print((K + 1 - r) * W)
+print(int('11110000',2))

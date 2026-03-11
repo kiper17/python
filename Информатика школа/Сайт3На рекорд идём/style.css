@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: #000;
+    background: linear-gradient(238.19deg, #FFFFFF 18.03%, #979797 90.83%);
+}
+
+/* Общая шапка */
+header {
+    padding: 20px;
+    position: relative;
+}
+
+/* Заголовок страницы ВЫБЕРИ */
+.page-title {
+    position: absolute;
+    width: 829px;
+    height: 242px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 242px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Подзаголовок КАМЕНЬ ЧУДЕС */
+.subtitle {
+    position: absolute;
+    width: 394px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 199px;
+    font-family: 'Muller';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Логотип и переключатель языка */
+.logo-lang {
+    position: absolute;
+    width: 60px;
+    height: 51px;
+    left: 59px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.lang-text {
+    position: absolute;
+    width: 45px;
+    height: 51px;
+    left: 0;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: underline;
+    color: #000000;
+}
+
+.lang-arrows {
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    left: 41px;
+    top: 9px;
+}
+
+.arrow {
+    position: absolute;
+    display: block;
+    width: 13.64px;
+    height: 2px;
+    background: #000000;
+    border-radius: 1px;
+}
+
+.arrow-left {
+    left: 0;
+    top: 0;
+    transform: rotate(-35deg);
+}
+
+.arrow-right {
+    right: 0;
+    top: 0;
+    transform: rotate(35deg);
+}
+
+/* Гамбургер-меню */
+.menu-toggle {
+    position: absolute;
+    width: 53px;
+    height: 39px;
+    right: 20px;
+    top: 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 53px;
+    height: 10.67px;
+    border-radius: 32px;
+    transition: all 0.3s ease;
+}
+
+/* Меню навигации */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+nav a:last-child {
+    margin-bottom: 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Контент */
+main {
+    padding: 40px;
+}
+
+/* Первая страница — линейный фон */
+.page-home {
+    min-height: 100vh;
+}
+
+/* Шкатулка по размерам из Figma */
+.chest {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    width: 1079.09px;
+    height: 1055.45px;
+}
+
+.chest img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Логотип (правый нижний) */
+.site-logo {
+    position: absolute;
+    width: 158px;
+    height: 161px;
+    left: 1501px;
+    top: 907px;
+}
+
+.site-logo .logo-circle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: 0;
+    top: 2px; /* смещение чтобы круг был на 909px */
+    background: transparent;
+}
+
+.site-logo .logo-img {
+    position: absolute;
+    width: 158px;
+    height: 161px;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+/* Footer - авторские права */
+.copyright {
+    position: absolute;
+    width: 977px;
+    height: 132px;
+    left: 26px;
+    /* Ставим footer ниже изображения (chest top 30px + chest height ~1079px) */
+    top: 1129px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+    color: #000000;
+}
